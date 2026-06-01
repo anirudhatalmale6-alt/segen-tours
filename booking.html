@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Now | SEGEN Tours Transfers & Car Rentals</title>
+  <meta name="description" content="Book your Namibian tour, transfer, or car rental with SEGEN Tours. Easy online booking for Walvis Bay tours, airport transfers, and vehicle rentals.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Book Now | SEGEN Tours Transfers & Car Rentals">
+  <meta property="og:description" content="Book tours, transfers, and car rentals in Namibia. Simple 4-step booking process.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://segengo.com/booking">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1535392432937-a27c36ec07b5?w=1200&q=80">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header header--transparent" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="nav__logo" aria-label="SEGEN Tours home">
+        <span class="nav__logo-text">SEGEN <span>Tours</span></span>
+      </a>
+      <ul class="nav__menu">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="packages.html" class="nav__link">Packages</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <a href="booking.html" class="btn btn--primary btn--small nav__cta">Book Now</a>
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu__overlay" aria-hidden="true"></div>
+  <div class="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="services.html" class="mobile-menu__link">Services</a>
+    <a href="packages.html" class="mobile-menu__link">Packages</a>
+    <a href="booking.html" class="mobile-menu__link">Booking</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+    <a href="booking.html" class="btn btn--primary btn--large mobile-menu__cta">Book Now</a>
+    <div class="mobile-menu__contact">
+      <p><a href="tel:+264817424200">+264 81 742 4200</a></p>
+      <p><a href="mailto:info@segengo.com">info@segengo.com</a></p>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header" aria-label="Booking page hero">
+      <div class="page-header__bg" style="background-image: url('https://images.unsplash.com/photo-1535392432937-a27c36ec07b5?w=1600&q=80');" role="img" aria-label="Namibian savanna landscape at golden hour"></div>
+      <div class="page-header__overlay"></div>
+      <div class="page-header__content">
+        <div class="page-header__breadcrumb">
+          <a href="index.html">Home</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          <span>Booking</span>
+        </div>
+        <h1 class="page-header__title">Book Your Experience</h1>
+        <p class="page-header__subtitle">A few simple steps to your next unforgettable Namibian adventure.</p>
+      </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="section">
+      <div class="container">
+        <div class="booking-form-container reveal" id="bookingForm">
+
+          <!-- Step Indicators -->
+          <div class="booking-steps">
+            <div class="booking-step active">
+              <span class="booking-step__number">1</span>
+              Service
+            </div>
+            <div class="booking-step">
+              <span class="booking-step__number">2</span>
+              Details
+            </div>
+            <div class="booking-step">
+              <span class="booking-step__number">3</span>
+              Personal
+            </div>
+            <div class="booking-step">
+              <span class="booking-step__number">4</span>
+              Review
+            </div>
+          </div>
+
+          <!-- Form Body -->
+          <div class="booking-form__body">
+
+            <!-- Step 1: Service Type -->
+            <div class="form-step active" data-step="1">
+              <h3 class="form-step__title">Select Your Service</h3>
+              <p class="form-step__subtitle">Choose the type of service you're interested in.</p>
+
+              <div class="service-type-grid">
+                <div class="service-type-card" data-type="tour">
+                  <div class="service-type-card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
+                  </div>
+                  <div class="service-type-card__title">Tour Package</div>
+                </div>
+
+                <div class="service-type-card" data-type="transfer">
+                  <div class="service-type-card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h2m10 0h2M2 9l2-6h16l2 6M2 9h20v8H2zM6 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM18 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                  </div>
+                  <div class="service-type-card__title">Transfer / Chauffeur</div>
+                </div>
+
+                <div class="service-type-card" data-type="rental">
+                  <div class="service-type-card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>
+                  </div>
+                  <div class="service-type-card__title">Car Rental</div>
+                </div>
+              </div>
+
+              <div class="form-actions" style="justify-content: flex-end;">
+                <button class="btn btn--primary" data-next>
+                  Continue
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;margin-left:6px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Service Details -->
+            <div class="form-step" data-step="2">
+              <h3 class="form-step__title">Service Details</h3>
+              <p class="form-step__subtitle">Tell us more about your requirements.</p>
+
+              <div class="form-group">
+                <label for="specificService">Select Service</label>
+                <select id="specificService" required>
+                  <option value="">Select a service type first...</option>
+                </select>
+                <p class="error-msg">Please select a service.</p>
+              </div>
+
+              <div class="form-group">
+                <label>Select Date</label>
+                <input type="hidden" id="selectedDate">
+                <div class="calendar" id="calendar">
+                  <div class="calendar__header">
+                    <h4 id="calMonthYear"></h4>
+                    <div class="calendar__nav">
+                      <button type="button" id="calPrev" aria-label="Previous month">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path d="M15 18l-6-6 6-6"/></svg>
+                      </button>
+                      <button type="button" id="calNext" aria-label="Next month">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path d="M9 18l6-6-6-6"/></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="calendar__weekdays">
+                    <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+                  </div>
+                  <div class="calendar__days" id="calDays"></div>
+                </div>
+                <p class="error-msg" style="display: none;" id="dateError">Please select a date.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="guestCount">Number of Guests</label>
+                <input type="number" id="guestCount" min="1" max="50" value="2" required>
+                <p class="error-msg">Please enter number of guests.</p>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn--back" data-prev>Back</button>
+                <button class="btn btn--primary" data-next>
+                  Continue
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;margin-left:6px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Personal Details -->
+            <div class="form-step" data-step="3">
+              <h3 class="form-step__title">Personal Information</h3>
+              <p class="form-step__subtitle">How can we reach you?</p>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" placeholder="John" required>
+                  <p class="error-msg">First name is required.</p>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" placeholder="Doe" required>
+                  <p class="error-msg">Last name is required.</p>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="bookingEmail">Email Address</label>
+                  <input type="email" id="bookingEmail" placeholder="john@example.com" required>
+                  <p class="error-msg">Valid email is required.</p>
+                </div>
+                <div class="form-group">
+                  <label for="bookingPhone">Phone Number</label>
+                  <input type="tel" id="bookingPhone" placeholder="+264 81 XXX XXXX" required>
+                  <p class="error-msg">Phone number is required.</p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="specialRequests">Special Requests (Optional)</label>
+                <textarea id="specialRequests" placeholder="Any dietary requirements, accessibility needs, or special occasions? Let us know..."></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn--back" data-prev>Back</button>
+                <button class="btn btn--primary" data-next>
+                  Review Booking
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;margin-left:6px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 4: Review -->
+            <div class="form-step" data-step="4">
+              <h3 class="form-step__title">Review Your Booking</h3>
+              <p class="form-step__subtitle">Please confirm your details before submitting.</p>
+
+              <div class="review-section">
+                <h4>Service Details</h4>
+                <div class="review-row">
+                  <span>Service Type</span>
+                  <span id="reviewServiceType"></span>
+                </div>
+                <div class="review-row">
+                  <span>Selected Service</span>
+                  <span id="reviewService"></span>
+                </div>
+                <div class="review-row">
+                  <span>Date</span>
+                  <span id="reviewDate"></span>
+                </div>
+                <div class="review-row">
+                  <span>Guests</span>
+                  <span id="reviewGuests"></span>
+                </div>
+              </div>
+
+              <div class="review-section">
+                <h4>Contact Information</h4>
+                <div class="review-row">
+                  <span>Name</span>
+                  <span id="reviewName"></span>
+                </div>
+                <div class="review-row">
+                  <span>Email</span>
+                  <span id="reviewEmail"></span>
+                </div>
+                <div class="review-row">
+                  <span>Phone</span>
+                  <span id="reviewPhone"></span>
+                </div>
+                <div class="review-row">
+                  <span>Special Requests</span>
+                  <span id="reviewRequests"></span>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn--back" data-prev>Back</button>
+                <button class="btn btn--gold btn--large" id="submitBooking">
+                  Confirm Booking
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;margin-left:6px;"><polyline points="20 6 9 17 4 12"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Success State -->
+          <div class="booking-success">
+            <div class="booking-success__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h2>Booking Submitted!</h2>
+            <p>Thank you for choosing SEGEN Tours. We've received your booking request and will confirm your reservation via email within 24 hours.</p>
+            <p style="margin-top: 16px; color: var(--text-light); font-size: 0.9rem;">For urgent inquiries, call us at <a href="tel:+264817424200" style="color: var(--burnt-orange); font-weight: 600;">+264 81 742 4200</a></p>
+            <a href="index.html" class="btn btn--primary" style="margin-top: 32px;">Return Home</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Help Section -->
+    <section class="section section--sand">
+      <div class="container text-center">
+        <h2 class="section-title reveal">Need Help Booking?</h2>
+        <p class="section-subtitle reveal">Our team is ready to assist you with any questions about our services, availability, or custom requests.</p>
+        <div class="reveal" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="tel:+264817424200" class="btn btn--primary btn--large">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call +264 81 742 4200
+          </a>
+          <a href="mailto:info@segengo.com" class="btn btn--outline btn--large">Email Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>SEGEN <span>Tours</span></h3>
+          <p>Your trusted partner for premium tours, transfers, and car rentals in Namibia. Based in Walvis Bay, connecting travelers to unforgettable destinations since 2025.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Our Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#tours">Guided Tours</a></li>
+            <li><a href="services.html#transfers">Airport Transfers</a></li>
+            <li><a href="services.html#rentals">Car Rentals</a></li>
+            <li><a href="services.html#transfers">Corporate Transport</a></li>
+            <li><a href="packages.html">Tour Packages</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Contact Us</h4>
+          <div class="footer__contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Unit 14, Gateway Industrial Park, Walvis Bay, Namibia</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:+264817424200">+264 81 742 4200</a></p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <a href="mailto:info@segengo.com">info@segengo.com</a></p>
+          </div>
+          <div class="footer__newsletter">
+            <form class="footer__newsletter-form" aria-label="Footer newsletter signup">
+              <input type="email" placeholder="Your email" required aria-label="Email for newsletter">
+              <button type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 SEGEN Tours Transfers & Car Rentals. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

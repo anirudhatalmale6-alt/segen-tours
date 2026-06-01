@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | SEGEN Tours Transfers & Car Rentals</title>
+  <meta name="description" content="Get in touch with SEGEN Tours in Walvis Bay, Namibia. Call +264 81 742 4200 or email info@segengo.com for tour bookings, transfer inquiries, and car rentals.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact SEGEN Tours Transfers & Car Rentals">
+  <meta property="og:description" content="Reach out to SEGEN Tours in Walvis Bay, Namibia. Phone, email, and office location.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://segengo.com/contact">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=1200&q=80">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "TravelAgency",
+      "name": "SEGEN Tours Transfers & Car Rentals",
+      "telephone": ["+264817424200", "+264811223454"],
+      "email": "info@segengo.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 14, Gateway Industrial Park, No. 15 Langer Heinrich Crescent, New Industrial Area",
+        "addressLocality": "Walvis Bay",
+        "addressCountry": "NA"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "16:00" }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header header--transparent" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="nav__logo" aria-label="SEGEN Tours home">
+        <span class="nav__logo-text">SEGEN <span>Tours</span></span>
+      </a>
+      <ul class="nav__menu">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="packages.html" class="nav__link">Packages</a></li>
+        <li><a href="contact.html" class="nav__link active">Contact</a></li>
+      </ul>
+      <a href="booking.html" class="btn btn--primary btn--small nav__cta">Book Now</a>
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu__overlay" aria-hidden="true"></div>
+  <div class="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="services.html" class="mobile-menu__link">Services</a>
+    <a href="packages.html" class="mobile-menu__link">Packages</a>
+    <a href="booking.html" class="mobile-menu__link">Booking</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+    <a href="booking.html" class="btn btn--primary btn--large mobile-menu__cta">Book Now</a>
+    <div class="mobile-menu__contact">
+      <p><a href="tel:+264817424200">+264 81 742 4200</a></p>
+      <p><a href="mailto:info@segengo.com">info@segengo.com</a></p>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header" aria-label="Contact page hero">
+      <div class="page-header__bg" style="background-image: url('https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=1600&q=80');" role="img" aria-label="Walvis Bay coastal landscape in Namibia"></div>
+      <div class="page-header__overlay"></div>
+      <div class="page-header__content">
+        <div class="page-header__breadcrumb">
+          <a href="index.html">Home</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          <span>Contact</span>
+        </div>
+        <h1 class="page-header__title">Get in Touch</h1>
+        <p class="page-header__subtitle">We'd love to hear from you. Reach out to us anytime.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Contact Form -->
+          <div class="contact-form reveal-left" id="contactFormContainer">
+            <h3>Send Us a Message</h3>
+            <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactFirstName">First Name</label>
+                  <input type="text" id="contactFirstName" placeholder="Your first name" required>
+                  <p class="error-msg">First name is required.</p>
+                </div>
+                <div class="form-group">
+                  <label for="contactLastName">Last Name</label>
+                  <input type="text" id="contactLastName" placeholder="Your last name" required>
+                  <p class="error-msg">Last name is required.</p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" placeholder="your@email.com" required>
+                <p class="error-msg">Valid email is required.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" placeholder="How can we help you? Tell us about your travel plans, questions, or requests..." required></textarea>
+                <p class="error-msg">Message is required.</p>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--large" style="width: 100%;">
+                Send Message
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+
+            <div class="contact-success">
+              <div class="booking-success__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h2 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--deep-brown); margin-bottom: 12px;">Message Sent!</h2>
+              <p style="color: var(--text-light);">Thank you for reaching out. We'll respond to your inquiry within 24 hours.</p>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-info reveal-right">
+            <div class="contact-info__item">
+              <div class="contact-info__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-info__text">
+                <h4>Email Us</h4>
+                <a href="mailto:info@segengo.com">info@segengo.com</a>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-info__text">
+                <h4>Call Us</h4>
+                <p><a href="tel:+264817424200">+264 81 742 4200</a></p>
+                <p><a href="tel:+264811223454">+264 81 122 3454</a></p>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-info__text">
+                <h4>Visit Us</h4>
+                <p>Unit 14, Gateway Industrial Park<br>No. 15 Langer Heinrich Crescent<br>New Industrial Area<br>Walvis Bay, Namibia</p>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <div class="contact-info__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div class="contact-info__text">
+                <h4>Business Hours</h4>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter / X">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              </a>
+            </div>
+
+            <!-- Map Placeholder -->
+            <div class="map-placeholder">
+              <div class="map-placeholder__pattern"></div>
+              <div class="map-placeholder__content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <p>Gateway Industrial Park, Walvis Bay</p>
+                <a href="https://www.google.com/maps/search/Gateway+Industrial+Park+Walvis+Bay+Namibia" target="_blank" rel="noopener" style="color: var(--burnt-orange); font-weight: 600; font-size: 0.85rem; margin-top: 4px; display: inline-block;">Open in Google Maps</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ CTA -->
+    <section class="section section--sand">
+      <div class="container text-center">
+        <h2 class="section-title reveal">Frequently Asked Questions</h2>
+        <p class="section-subtitle reveal">Quick answers to common questions about our services.</p>
+
+        <div style="max-width: 700px; margin: 0 auto; text-align: left;">
+          <div class="reveal" style="background: var(--white); border-radius: var(--radius); padding: 24px 28px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
+            <h4 style="font-family: var(--font-heading); color: var(--deep-brown); margin-bottom: 8px;">How far in advance should I book?</h4>
+            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7;">We recommend booking at least 48 hours in advance for tours and transfers, and 1 week ahead for multi-day packages. During peak season (June-October), earlier booking is advised.</p>
+          </div>
+
+          <div class="reveal" style="background: var(--white); border-radius: var(--radius); padding: 24px 28px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
+            <h4 style="font-family: var(--font-heading); color: var(--deep-brown); margin-bottom: 8px;">What is your cancellation policy?</h4>
+            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7;">Free cancellation up to 48 hours before your scheduled service. Cancellations within 24 hours may incur a 50% charge. Contact us for details.</p>
+          </div>
+
+          <div class="reveal" style="background: var(--white); border-radius: var(--radius); padding: 24px 28px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
+            <h4 style="font-family: var(--font-heading); color: var(--deep-brown); margin-bottom: 8px;">Do you offer pickup from Windhoek?</h4>
+            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7;">Yes, we offer transfers from Windhoek (Hosea Kutako International Airport) to Walvis Bay and Swakopmund. Contact us for pricing on long-distance transfers.</p>
+          </div>
+
+          <div class="reveal" style="background: var(--white); border-radius: var(--radius); padding: 24px 28px; box-shadow: var(--shadow-sm);">
+            <h4 style="font-family: var(--font-heading); color: var(--deep-brown); margin-bottom: 8px;">What payment methods do you accept?</h4>
+            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7;">We accept bank transfers, cash (NAD, USD, EUR), and major credit cards. Payment details will be provided upon booking confirmation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>SEGEN <span>Tours</span></h3>
+          <p>Your trusted partner for premium tours, transfers, and car rentals in Namibia. Based in Walvis Bay, connecting travelers to unforgettable destinations since 2025.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Our Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#tours">Guided Tours</a></li>
+            <li><a href="services.html#transfers">Airport Transfers</a></li>
+            <li><a href="services.html#rentals">Car Rentals</a></li>
+            <li><a href="services.html#transfers">Corporate Transport</a></li>
+            <li><a href="packages.html">Tour Packages</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Contact Us</h4>
+          <div class="footer__contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Unit 14, Gateway Industrial Park, Walvis Bay, Namibia</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:+264817424200">+264 81 742 4200</a></p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <a href="mailto:info@segengo.com">info@segengo.com</a></p>
+          </div>
+          <div class="footer__newsletter">
+            <form class="footer__newsletter-form" aria-label="Footer newsletter signup">
+              <input type="email" placeholder="Your email" required aria-label="Email for newsletter">
+              <button type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 SEGEN Tours Transfers & Car Rentals. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
