@@ -3046,6 +3046,100 @@ button {
   }
 }
 
+/* ---------- WhatsApp Floating Button ---------- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+@keyframes whatsapp-pulse {
+  0%, 100% { box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 4px 25px rgba(37, 211, 102, 0.7); }
+}
+
+/* ---------- Payment Section ---------- */
+.payment-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--light-gray);
+}
+
+.payment-section h4 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--navy);
+}
+
+.payment-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.payment-option {
+  flex: 1;
+  cursor: pointer;
+}
+
+.payment-option input[type="radio"] {
+  display: none;
+}
+
+.payment-option__card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border: 2px solid var(--light-gray);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  background: var(--white);
+}
+
+.payment-option input:checked + .payment-option__card {
+  border-color: var(--navy);
+  background: rgba(27, 42, 74, 0.04);
+  box-shadow: 0 0 0 1px var(--navy);
+}
+
+.payment-option__card:hover {
+  border-color: var(--navy-light);
+}
+
+.payment-option__card span {
+  font-weight: 600;
+  color: var(--text);
+}
+
+@media (max-width: 480px) {
+  .payment-options {
+    flex-direction: column;
+  }
+}
+
 /* ---------- Print Styles ---------- */
 @media print {
   .header,
