@@ -658,11 +658,11 @@ button {
 
 .hero__label {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--white);
   margin-bottom: 20px;
   opacity: 0;
   animation: fadeInUp 1s ease 0.3s forwards;
