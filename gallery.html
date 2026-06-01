@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | SEGEN Tours Transfers & Car Rentals</title>
+  <meta name="description" content="Browse stunning photos from SEGEN Tours adventures across Namibia. Desert dunes, wildlife safaris, coastal views, and unforgettable travel moments.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gallery | SEGEN Tours Transfers & Car Rentals">
+  <meta property="og:description" content="Explore breathtaking images from our Namibian tours, safaris, and coastal adventures.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://segengo.com/gallery">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=1200&q=80">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header header--transparent" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="nav__logo" aria-label="SEGEN Tours home">
+        <span class="nav__logo-text">SEGEN <span>Tours</span></span>
+      </a>
+      <ul class="nav__menu">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="packages.html" class="nav__link">Packages</a></li>
+        <li><a href="gallery.html" class="nav__link active">Gallery</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <a href="booking.html" class="btn btn--primary btn--small nav__cta">Book Now</a>
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu__overlay" aria-hidden="true"></div>
+  <div class="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="services.html" class="mobile-menu__link">Services</a>
+    <a href="packages.html" class="mobile-menu__link">Packages</a>
+    <a href="gallery.html" class="mobile-menu__link">Gallery</a>
+    <a href="booking.html" class="mobile-menu__link">Booking</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+    <a href="booking.html" class="btn btn--primary btn--large mobile-menu__cta">Book Now</a>
+    <div class="mobile-menu__contact">
+      <p><a href="tel:+264817424200">+264 81 742 4200</a></p>
+      <p><a href="mailto:info@segengo.com">info@segengo.com</a></p>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header" aria-label="Gallery page hero">
+      <div class="page-header__bg" style="background-image: url('https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=1600&q=80');" role="img" aria-label="Golden sand dunes of the Namib Desert"></div>
+      <div class="page-header__overlay"></div>
+      <div class="page-header__content">
+        <div class="page-header__breadcrumb">
+          <a href="index.html">Home</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          <span>Gallery</span>
+        </div>
+        <h1 class="page-header__title">Our Gallery</h1>
+        <p class="page-header__subtitle">A visual journey through Namibia's breathtaking landscapes, wildlife, and unforgettable tour moments.</p>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+      <div class="container">
+        <!-- Filter Buttons -->
+        <div class="gallery-filters reveal" aria-label="Gallery category filters">
+          <button class="gallery-filter active" data-filter="all">All</button>
+          <button class="gallery-filter" data-filter="tours">Tours</button>
+          <button class="gallery-filter" data-filter="landscapes">Landscapes</button>
+          <button class="gallery-filter" data-filter="wildlife">Wildlife</button>
+          <button class="gallery-filter" data-filter="vehicles">Vehicles</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+
+          <div class="gallery-item reveal" data-category="landscapes">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=800&q=80" alt="Towering sand dunes of Sossusvlei glowing orange at sunrise in the Namib Desert" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Landscapes</span>
+              <h3 class="gallery-item__caption">Sossusvlei Sand Dunes</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item gallery-item--tall reveal" data-category="wildlife">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80" alt="Flock of pink flamingos wading in the shallow waters of Walvis Bay lagoon" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Wildlife</span>
+              <h3 class="gallery-item__caption">Flamingos at Walvis Bay</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="tours">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0afa?w=800&q=80" alt="Tour guide leading a group of tourists through the Namibian desert landscape" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Tours</span>
+              <h3 class="gallery-item__caption">Guided Desert Excursion</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="wildlife">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=800&q=80" alt="Majestic elephant walking across the dry savanna in Etosha National Park" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Wildlife</span>
+              <h3 class="gallery-item__caption">Etosha Elephant Encounter</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item gallery-item--wide reveal" data-category="landscapes">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=1200&q=80" alt="Panoramic view of the Walvis Bay coastline with the Atlantic Ocean meeting the desert" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Landscapes</span>
+              <h3 class="gallery-item__caption">Walvis Bay Coastal Panorama</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="vehicles">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80" alt="Rugged 4x4 off-road vehicle ready for desert dune driving adventures" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Vehicles</span>
+              <h3 class="gallery-item__caption">4x4 Desert Explorer</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="wildlife">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1535392432937-a27c36ec07b5?w=800&q=80" alt="Herd of giraffes silhouetted against a golden Namibian sunset in the savanna" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Wildlife</span>
+              <h3 class="gallery-item__caption">Giraffes at Golden Hour</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item gallery-item--tall reveal" data-category="landscapes">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1473175494278-d83ed8459089?w=800&q=80" alt="Dramatic red sand dunes of the Namib Desert stretching into the distance under a clear blue sky" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Landscapes</span>
+              <h3 class="gallery-item__caption">Namib Desert Red Dunes</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="tours">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1590767187978-591e16bec08b?w=800&q=80" alt="Vibrant local community cultural tour experience in Walvis Bay township" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Tours</span>
+              <h3 class="gallery-item__caption">Township Cultural Tour</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="vehicles">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80" alt="Modern SUV crossover vehicle available for self-drive tours across Namibia" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Vehicles</span>
+              <h3 class="gallery-item__caption">Premium SUV Fleet</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item gallery-item--wide reveal" data-category="tours">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&q=80" alt="Tourists enjoying a scenic coastal drive along the road between Swakopmund and Walvis Bay" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Tours</span>
+              <h3 class="gallery-item__caption">Swakopmund Coastal Drive</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="wildlife">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=800&q=80" alt="Cape fur seals basking on rocks along the Namibian Atlantic coastline" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Wildlife</span>
+              <h3 class="gallery-item__caption">Cape Fur Seals</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="landscapes">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1504945005722-33670dcaf685?w=800&q=80" alt="Spectacular sunset painting the Namibian sky in shades of orange and purple over the desert" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Landscapes</span>
+              <h3 class="gallery-item__caption">Namibian Desert Sunset</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="vehicles">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&q=80" alt="Comfortable minibus van used for group tours and airport transfers in Namibia" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Vehicles</span>
+              <h3 class="gallery-item__caption">Group Tour Minibus</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="tours">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&q=80" alt="Convoy of tour vehicles heading out for an early morning safari adventure" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Tours</span>
+              <h3 class="gallery-item__caption">Morning Safari Departure</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item gallery-item--tall reveal" data-category="wildlife">
+            <div class="gallery-item__image">
+              <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?w=800&q=80" alt="Zebras gathered at a waterhole in Etosha National Park during a game drive" loading="lazy">
+            </div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__category">Wildlife</span>
+              <h3 class="gallery-item__caption">Etosha Waterhole Zebras</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="cta__bg" style="background-image: url('https://images.unsplash.com/photo-1535392432937-a27c36ec07b5?w=1600&q=80');" role="img" aria-label="Namibian wildlife landscape"></div>
+      <div class="cta__overlay"></div>
+      <div class="container">
+        <div class="cta__content reveal">
+          <h2 class="cta__title">Ready to Create Your Own Memories?</h2>
+          <p class="cta__text">These moments are waiting for you. Book your Namibian adventure today and capture your own unforgettable experiences.</p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="booking.html" class="btn btn--gold btn--large btn--icon">
+              Book Your Tour
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="packages.html" class="btn btn--secondary btn--large">View Packages</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button class="gallery-lightbox__close" aria-label="Close lightbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <button class="gallery-lightbox__nav gallery-lightbox__prev" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="gallery-lightbox__nav gallery-lightbox__next" aria-label="Next image">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <div class="gallery-lightbox__content">
+      <img src="" alt="" class="gallery-lightbox__image">
+      <div class="gallery-lightbox__caption"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>SEGEN <span>Tours</span></h3>
+          <p>Your trusted partner for premium tours, transfers, and car rentals in Namibia. Based in Walvis Bay, connecting travelers to unforgettable destinations since 2025.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Our Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#tours">Guided Tours</a></li>
+            <li><a href="services.html#transfers">Airport Transfers</a></li>
+            <li><a href="services.html#rentals">Car Rentals</a></li>
+            <li><a href="services.html#transfers">Corporate Transport</a></li>
+            <li><a href="packages.html">Tour Packages</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Contact Us</h4>
+          <div class="footer__contact">
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Unit 14, Gateway Industrial Park, Walvis Bay, Namibia</p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:+264817424200">+264 81 742 4200</a></p>
+            <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <a href="mailto:info@segengo.com">info@segengo.com</a></p>
+          </div>
+          <div class="footer__newsletter">
+            <form class="footer__newsletter-form" aria-label="Footer newsletter signup">
+              <input type="email" placeholder="Your email" required aria-label="Email for newsletter">
+              <button type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 SEGEN Tours Transfers & Car Rentals. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
