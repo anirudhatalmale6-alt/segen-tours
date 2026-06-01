@@ -589,7 +589,8 @@ button {
   min-height: 700px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 6%;
   overflow: hidden;
 }
 
@@ -650,7 +651,7 @@ button {
 .hero__content {
   position: relative;
   z-index: 2;
-  text-align: center;
+  text-align: left;
   padding: 0 24px;
   max-width: 800px;
 }
@@ -669,28 +670,21 @@ button {
 
 .hero__title {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(3rem, 7vw, 5rem);
   font-weight: 700;
   color: var(--white);
-  line-height: 1.15;
+  line-height: 1.1;
   margin-bottom: 24px;
   opacity: 0;
   animation: fadeInUp 1s ease 0.5s forwards;
 }
 
-.hero__title em {
-  font-style: italic;
-  color: var(--gold);
-}
-
 .hero__subtitle {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.15rem);
   color: rgba(255,255,255,0.85);
   line-height: 1.7;
   margin-bottom: 40px;
   max-width: 550px;
-  margin-left: auto;
-  margin-right: auto;
   opacity: 0;
   animation: fadeInUp 1s ease 0.7s forwards;
 }
