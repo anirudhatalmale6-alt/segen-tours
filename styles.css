@@ -658,9 +658,9 @@ button {
 
 .hero__label {
   display: block;
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 4px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--white);
   margin-bottom: 16px;
