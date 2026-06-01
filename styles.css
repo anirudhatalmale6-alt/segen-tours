@@ -433,9 +433,12 @@ button {
 
 .nav__logo-img {
   height: 65px;
+  max-height: 65px;
   width: auto;
+  max-width: 200px;
   display: block;
   border-radius: 4px;
+  object-fit: contain;
 }
 
 .nav__menu {
