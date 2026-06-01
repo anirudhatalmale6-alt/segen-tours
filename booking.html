@@ -153,7 +153,41 @@
                 <p class="error-msg">Please select a service.</p>
               </div>
 
-              <div class="form-group">
+              <!-- Transfer-specific fields (shown only when Transfer / Chauffeur is selected) -->
+              <div id="transferFields" style="display:none">
+                <div class="form-group">
+                  <label>Arrival Time</label>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="arrivalDate">Arrival Date</label>
+                      <input type="date" id="arrivalDate">
+                    </div>
+                    <div class="form-group">
+                      <label for="arrivalTime">Arrival Time</label>
+                      <input type="time" id="arrivalTime">
+                    </div>
+                    <div class="form-group">
+                      <label for="arrivalPeriod">AM/PM</label>
+                      <select id="arrivalPeriod">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="pickupLocation">Pick-Up Location</label>
+                  <input type="text" id="pickupLocation" placeholder="e.g., Hosea Kutako International Airport">
+                </div>
+
+                <div class="form-group">
+                  <label for="dropoffLocation">Drop-Off Location</label>
+                  <input type="text" id="dropoffLocation" placeholder="e.g., Walvis Bay Hotel">
+                </div>
+              </div>
+
+              <div class="form-group" id="calendarGroup">
                 <label>Select Date</label>
                 <input type="hidden" id="selectedDate">
                 <div class="calendar" id="calendar">
@@ -176,7 +210,7 @@
                 <p class="error-msg" style="display: none;" id="dateError">Please select a date.</p>
               </div>
 
-              <div class="form-group">
+              <div class="form-group" id="guestCountGroup">
                 <label for="guestCount">Number of Guests</label>
                 <input type="number" id="guestCount" min="1" max="50" value="2" required>
                 <p class="error-msg">Please enter number of guests.</p>
@@ -251,13 +285,25 @@
                   <span>Selected Service</span>
                   <span id="reviewService"></span>
                 </div>
-                <div class="review-row">
+                <div class="review-row" id="reviewDateRow">
                   <span>Date</span>
                   <span id="reviewDate"></span>
                 </div>
-                <div class="review-row">
+                <div class="review-row" id="reviewGuestsRow">
                   <span>Guests</span>
                   <span id="reviewGuests"></span>
+                </div>
+                <div class="review-row" id="reviewArrivalRow" style="display:none">
+                  <span>Arrival Date/Time</span>
+                  <span id="reviewArrival"></span>
+                </div>
+                <div class="review-row" id="reviewPickupRow" style="display:none">
+                  <span>Pick-Up Location</span>
+                  <span id="reviewPickup"></span>
+                </div>
+                <div class="review-row" id="reviewDropoffRow" style="display:none">
+                  <span>Drop-Off Location</span>
+                  <span id="reviewDropoff"></span>
                 </div>
               </div>
 

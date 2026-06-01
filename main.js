@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
       includes: ['Return transport from your accommodation', '4x4 desert vehicle with experienced driver', 'Professional English-speaking guide', 'Picnic lunch in the desert', 'Bottled water and refreshments']
     },
     4: {
-      title: 'Walvis Bay Township',
+      title: 'Walvis Bay Township Areas',
       image: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=900&q=80',
       duration: 'Half Day',
       time: '10:00 - 15:00',
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
       includes: ['Return transport from your accommodation', 'Local community guide', 'Traditional food tasting', 'Cultural activity access', 'Bottled water']
     },
     5: {
-      title: 'Multi-Attraction Tour',
+      title: 'Multiple Namibia Attractions',
       image: 'https://images.unsplash.com/photo-1535392432937-a27c36ec07b5?w=900&q=80',
       duration: '2 Days / 1 Night',
       time: 'Multi-day',
@@ -308,6 +308,21 @@ document.addEventListener('DOMContentLoaded', () => {
       const type = card.getAttribute('data-type');
       const specificSelect = document.getElementById('specificService');
       updateSpecificServices(type, specificSelect, preselectedPackage);
+
+      // Show/hide transfer-specific fields vs calendar/guest count
+      const transferFields = document.getElementById('transferFields');
+      const calendarGroup = document.getElementById('calendarGroup');
+      const guestCountGroup = document.getElementById('guestCountGroup');
+
+      if (type === 'transfer') {
+        if (transferFields) transferFields.style.display = '';
+        if (calendarGroup) calendarGroup.style.display = 'none';
+        if (guestCountGroup) guestCountGroup.style.display = 'none';
+      } else {
+        if (transferFields) transferFields.style.display = 'none';
+        if (calendarGroup) calendarGroup.style.display = '';
+        if (guestCountGroup) guestCountGroup.style.display = '';
+      }
     }
 
     function updateSpecificServices(type, select, preselect) {
@@ -316,16 +331,16 @@ document.addEventListener('DOMContentLoaded', () => {
           { value: 'pkg1', text: 'Swakopmund & Walvis Bay - Full Day (NAD 1,450/person)' },
           { value: 'pkg2', text: 'Walvis Bay Lagoon - Half Day (NAD 1,650/person)' },
           { value: 'pkg3', text: 'Walvis Bay & Namib Desert - Full Day (NAD 2,250/person)' },
-          { value: 'pkg4', text: 'Walvis Bay Township - Half Day (NAD 950/person)' },
-          { value: 'pkg5', text: 'Multi-Attraction Tour - 2 Days (NAD 3,950/person)' },
+          { value: 'pkg4', text: 'Walvis Bay Township Areas - Half Day (NAD 950/person)' },
+          { value: 'pkg5', text: 'Multiple Namibia Attractions - 2 Days (NAD 3,950/person)' },
           { value: 'pkg6', text: 'Etosha National Park - 3 Days (NAD 7,500/person)' }
         ],
         'transfer': [
           { value: 'airport', text: 'Airport Transfer' },
           { value: 'hotel', text: 'Hotel Transfer' },
           { value: 'corporate', text: 'Corporate Transfer' },
-          { value: 'event', text: 'Private Event Transfer' },
-          { value: 'custom', text: 'Custom Route Transfer' }
+          { value: 'private', text: 'Private Transfer' },
+          { value: 'cruise', text: 'Cruise Passenger Transfer' }
         ],
         'rental': [
           { value: 'sedan', text: 'Sedan / Compact Car' },
@@ -403,6 +418,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const service = document.getElementById('specificService');
         const date = document.getElementById('selectedDate');
         const guests = document.getElementById('guestCount');
+        const selectedType = document.querySelector('.service-type-card.selected');
+        const isTransfer = selectedType && selectedType.getAttribute('data-type') === 'transfer';
 
         if (service && !service.value) {
           service.classList.add('error');
@@ -411,18 +428,20 @@ document.addEventListener('DOMContentLoaded', () => {
           service.classList.remove('error');
         }
 
-        if (date && !date.value) {
-          date.classList.add('error');
-          valid = false;
-        } else if (date) {
-          date.classList.remove('error');
-        }
+        if (!isTransfer) {
+          if (date && !date.value) {
+            date.classList.add('error');
+            valid = false;
+          } else if (date) {
+            date.classList.remove('error');
+          }
 
-        if (guests && (!guests.value || guests.value < 1)) {
-          guests.classList.add('error');
-          valid = false;
-        } else if (guests) {
-          guests.classList.remove('error');
+          if (guests && (!guests.value || guests.value < 1)) {
+            guests.classList.add('error');
+            valid = false;
+          } else if (guests) {
+            guests.classList.remove('error');
+          }
         }
       }
 
@@ -457,14 +476,59 @@ document.addEventListener('DOMContentLoaded', () => {
     function populateReview() {
       const selectedType = document.querySelector('.service-type-card.selected');
       const typeText = selectedType ? selectedType.querySelector('.service-type-card__title').textContent : '';
+      const isTransfer = selectedType && selectedType.getAttribute('data-type') === 'transfer';
 
       const serviceSelect = document.getElementById('specificService');
       const serviceText = serviceSelect ? serviceSelect.options[serviceSelect.selectedIndex]?.text : '';
 
       document.getElementById('reviewServiceType').textContent = typeText;
       document.getElementById('reviewService').textContent = serviceText;
-      document.getElementById('reviewDate').textContent = document.getElementById('selectedDate')?.value || '';
-      document.getElementById('reviewGuests').textContent = document.getElementById('guestCount')?.value || '';
+
+      // Show/hide review rows based on service type
+      const reviewDateRow = document.getElementById('reviewDateRow');
+      const reviewGuestsRow = document.getElementById('reviewGuestsRow');
+      const reviewArrivalRow = document.getElementById('reviewArrivalRow');
+      const reviewPickupRow = document.getElementById('reviewPickupRow');
+      const reviewDropoffRow = document.getElementById('reviewDropoffRow');
+
+      if (isTransfer) {
+        // Hide standard date/guests rows
+        if (reviewDateRow) reviewDateRow.style.display = 'none';
+        if (reviewGuestsRow) reviewGuestsRow.style.display = 'none';
+
+        // Show transfer-specific rows
+        if (reviewArrivalRow) reviewArrivalRow.style.display = '';
+        if (reviewPickupRow) reviewPickupRow.style.display = '';
+        if (reviewDropoffRow) reviewDropoffRow.style.display = '';
+
+        // Populate transfer fields
+        const arrDate = document.getElementById('arrivalDate')?.value || '';
+        const arrTime = document.getElementById('arrivalTime')?.value || '';
+        const arrPeriod = document.getElementById('arrivalPeriod')?.value || '';
+        const arrivalStr = [arrDate, arrTime, arrPeriod].filter(Boolean).join(' ');
+        if (document.getElementById('reviewArrival')) {
+          document.getElementById('reviewArrival').textContent = arrivalStr || 'Not specified';
+        }
+        if (document.getElementById('reviewPickup')) {
+          document.getElementById('reviewPickup').textContent = document.getElementById('pickupLocation')?.value || 'Not specified';
+        }
+        if (document.getElementById('reviewDropoff')) {
+          document.getElementById('reviewDropoff').textContent = document.getElementById('dropoffLocation')?.value || 'Not specified';
+        }
+      } else {
+        // Show standard date/guests rows
+        if (reviewDateRow) reviewDateRow.style.display = '';
+        if (reviewGuestsRow) reviewGuestsRow.style.display = '';
+
+        // Hide transfer-specific rows
+        if (reviewArrivalRow) reviewArrivalRow.style.display = 'none';
+        if (reviewPickupRow) reviewPickupRow.style.display = 'none';
+        if (reviewDropoffRow) reviewDropoffRow.style.display = 'none';
+
+        document.getElementById('reviewDate').textContent = document.getElementById('selectedDate')?.value || '';
+        document.getElementById('reviewGuests').textContent = document.getElementById('guestCount')?.value || '';
+      }
+
       document.getElementById('reviewName').textContent =
         (document.getElementById('firstName')?.value || '') + ' ' +
         (document.getElementById('lastName')?.value || '');
