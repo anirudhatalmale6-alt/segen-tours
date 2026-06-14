@@ -56,8 +56,19 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closeMobileMenu);
   });
 
+  // ---------- Hero Slider ----------
+  const heroSlides = document.querySelectorAll('.hero__slide');
+  if (heroSlides.length > 1) {
+    let currentSlide = 0;
+    setInterval(() => {
+      heroSlides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % heroSlides.length;
+      heroSlides[currentSlide].classList.add('active');
+    }, 5000);
+  }
+
   // ---------- Parallax Effect ----------
-  const parallaxBgs = document.querySelectorAll('.hero__bg, .page-header__bg');
+  const parallaxBgs = document.querySelectorAll('.hero__slider, .page-header__bg');
 
   function handleParallax() {
     const scrollY = window.scrollY;
@@ -147,23 +158,23 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---------- Package Modal ----------
   const packageData = {
     1: {
-      title: 'Coast Explorer',
-      image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=900&q=80',
+      title: 'Spitzkoppe & Welwitschia Adventure',
+      image: 'images/pkg-spitzkoppe.jpg',
       duration: 'Full Day',
       time: 'Full Day',
-      price: 'NAD 1,450',
+      price: 'From N$ 1,850',
       priceNote: 'per person',
-      subtitle: 'Explore Namibia\'s iconic coastal treasures.',
-      description: 'Explore the enchanting coastal gems of Namibia on this full-day guided tour through Swakopmund and Walvis Bay. Discover the rich cultural heritage, stunning lagoon views alive with flamingos, fascinating museums, and the unique character of these seaside towns. From colonial architecture to ocean vistas, this tour captures the essence of the Namibian coast.',
-      highlights: ['Coastal sightseeing along the Atlantic shore', 'Flamingo lagoon viewing at Walvis Bay', 'Visit local museums and cultural sites', 'Explore Swakopmund town attractions', 'Photo opportunities at iconic landmarks', 'Local restaurant lunch stop'],
-      includes: ['Return transport from your accommodation', 'Professional English-speaking guide', 'Activity coordination', 'Bottled water throughout the trip', 'Light refreshments']
+      subtitle: 'Experience Namibia\'s geological wonders in one unforgettable day.',
+      description: 'From the iconic granite peaks of Spitzkoppe to the dramatic Moon Landscape and the ancient Welwitschia plants of the Namib Desert, this adventure showcases some of Namibia\'s most extraordinary natural treasures. Explore the majestic Rock Arch, enjoy a picnic lunch under granite formations, and discover plants that have survived for over a thousand years.',
+      highlights: ['Explore the majestic Spitzkoppe', 'Visit the famous Rock Arch', 'Scenic drive through the Namib Desert', 'Discover the spectacular Moon Landscape', 'Visit the ancient Welwitschia mirabilis', 'Photography stops at scenic viewpoints'],
+      includes: ['Return transport from Walvis Bay/Swakopmund', 'Professional guide/driver', 'Park and conservation fees', 'Bottled water', 'Picnic lunch', 'Guided sightseeing']
     },
     2: {
       title: 'Ocean Fun Cruise',
-      image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=900&q=80',
+      image: 'images/pkg-ocean-cruise.jpg',
       duration: 'Half Day',
       time: 'Half Day',
-      price: 'NAD 1,650',
+      price: 'From N$ 1,650',
       priceNote: 'per person',
       subtitle: 'Discover marine life and coastal beauty.',
       description: 'Embark on an unforgettable morning excursion across the Walvis Bay Lagoon. Glide through crystal waters as dolphins play alongside your vessel and seals bask on the shore. Savor freshly shucked Namibian oysters paired with chilled champagne while taking in the breathtaking beauty of the Atlantic coast. A true luxury experience.',
@@ -171,52 +182,52 @@ document.addEventListener('DOMContentLoaded', () => {
       includes: ['Return transport from your accommodation', 'Catamaran cruise with captain and crew', 'Champagne, oysters, and snacks on board', 'Professional guide', 'Bottled water']
     },
     3: {
-      title: 'Segen Desert Flames Experience',
-      image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=900&q=80',
+      title: 'Sandwich Harbour Adventure',
+      image: 'images/pkg-sandwich-harbour.jpg',
       duration: 'Full Day',
       time: 'Full Day',
-      price: 'NAD 2,250',
+      price: 'From N$ 2,800',
       priceNote: 'per person',
-      subtitle: 'Experience the magic where desert meets ocean.',
-      description: 'Journey from the coast into the heart of the ancient Namib Desert on this thrilling full-day adventure. Experience the adrenaline of 4x4 dune driving across towering sand dunes, witness breathtaking desert panoramas stretching to the horizon, and capture stunning sunset photographs as the desert glows in golden hues. This tour perfectly blends adventure with natural beauty.',
-      highlights: ['Thrilling 4x4 dune driving experience', 'Panoramic desert landscape views', 'Sunset photography session', 'Adventure experience in the Namib', 'Visit to Dune 7 - tallest dune in Namibia', 'Desert wildlife spotting'],
-      includes: ['Return transport from your accommodation', '4x4 desert vehicle with experienced driver', 'Professional English-speaking guide', 'Picnic lunch in the desert', 'Bottled water and refreshments']
+      subtitle: 'Where the towering dunes of the Namib meet the Atlantic Ocean.',
+      description: 'Journey to one of Namibia\'s most spectacular natural wonders where massive sand dunes plunge directly into the Atlantic Ocean. Experience thrilling 4x4 dune driving, explore the Sandwich Harbour lagoon, and witness breathtaking landscapes where desert and ocean collide. This is one of the most photographed locations in all of Namibia.',
+      highlights: ['Thrilling 4x4 dune driving', 'Sandwich Harbour lagoon exploration', 'Desert meets ocean panoramic views', 'Spectacular photo opportunities', 'Walvis Bay lagoon flamingos', 'Picnic lunch with ocean views'],
+      includes: ['Return transport from your accommodation', '4x4 vehicle with experienced driver', 'Professional English-speaking guide', 'Picnic lunch', 'Bottled water and refreshments', 'Park and conservation fees']
     },
     4: {
-      title: 'Segen Township Rhythm Tour',
-      image: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=900&q=80',
+      title: 'Swakopmund / Walvis Bay Township Tour',
+      image: 'images/pkg-township-tour.jpg',
       duration: 'Half Day',
       time: 'Half Day',
-      price: 'NAD 950',
+      price: 'From N$ 950',
       priceNote: 'per person',
-      subtitle: 'Connect with the heart and culture of Namibia.',
-      description: 'Immerse yourself in the vibrant heart of Walvis Bay\'s local community on this culturally rich township tour. Experience authentic Namibian life as you visit local markets, taste traditional dishes prepared by community members, enjoy live music and dance performances, and engage with friendly locals who share their stories and traditions. A truly heartwarming experience.',
+      subtitle: 'Experience authentic Namibian culture and community life.',
+      description: 'Immerse yourself in the vibrant heart of Swakopmund and Walvis Bay\'s local communities on this culturally rich township tour. Experience authentic Namibian life as you visit local markets, taste traditional dishes prepared by community members, enjoy live music and dance performances, and engage with friendly locals who share their stories and traditions.',
       highlights: ['Authentic local culture and lifestyle experience', 'Traditional Namibian food tasting', 'Live music and dance performances', 'Community interaction and storytelling', 'Visit local artisan markets', 'Support local community projects'],
       includes: ['Return transport from your accommodation', 'Local community guide', 'Traditional food tasting', 'Cultural activity access', 'Bottled water']
     },
     5: {
-      title: 'Wild Namibia',
-      image: 'https://images.unsplash.com/photo-1535392432937-a27c36ec07b5?w=900&q=80',
-      duration: '2 Days / 1 Night',
-      time: 'Multi-day',
-      price: 'NAD 3,950',
-      priceNote: 'per person',
-      subtitle: 'An unforgettable journey through Namibia\'s wild beauty.',
-      description: 'Discover the best of Namibia\'s central region on this comprehensive two-day tour. From scenic coastal stops to inland wildlife encounters, this journey covers diverse landscapes and unforgettable experiences. Enjoy a comfortable overnight stay, wake to stunning sunrise activities, and explore multiple attractions at a relaxed pace. Perfect for those wanting more than a day trip.',
-      highlights: ['Scenic coastal and inland stops', 'Wildlife viewing opportunities', 'Stunning sunrise activities', 'Comfortable overnight accommodation', 'Multiple attractions and viewpoints', 'Desert and coastal ecosystems'],
-      includes: ['All transport throughout the tour', 'Professional English-speaking guide', '1 night accommodation with breakfast', 'Selected meals and refreshments', 'Activity coordination and entrance fees', 'Bottled water']
-    },
-    6: {
-      title: 'Segen Etosha Wildlife Escape',
-      image: 'https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=900&q=80',
+      title: 'Damaraland Explorer',
+      image: 'images/pkg-damaraland.jpg',
       duration: '3 Days / 2 Nights',
       time: 'Multi-day',
-      price: 'NAD 7,500',
+      price: 'From N$ 5,150',
+      priceNote: 'per person (sharing)',
+      subtitle: 'Discover ancient rock art, dramatic landscapes, and desert-adapted wildlife.',
+      description: 'Explore the rugged beauty of Damaraland on this immersive three-day adventure. Visit the UNESCO World Heritage Site of Twyfelfontein with its ancient rock engravings, marvel at the otherworldly Burnt Mountain and the striking Organ Pipes geological formations. Stay in comfortable budget lodges or campsites surrounded by dramatic desert landscapes.',
+      highlights: ['Twyfelfontein UNESCO rock engravings', 'Burnt Mountain volcanic landscape', 'Organ Pipes geological formations', 'Desert-adapted wildlife spotting', 'Scenic Damaraland landscapes', 'Learn about regional geology and history'],
+      includes: ['Return transport from Walvis Bay', '2 nights accommodation (Budget Lodge/Campsite)', 'Breakfast', 'Visit to Twyfelfontein', 'Visit to Burnt Mountain', 'Visit to Organ Pipes', 'Professional guide/driver', 'Bottled water']
+    },
+    6: {
+      title: 'Etosha Wildlife Explorer',
+      image: 'images/pkg-etosha-escape.jpg',
+      duration: '3 Days / 2 Nights',
+      time: 'Multi-day',
+      price: 'From N$ 8,500',
       priceNote: 'per person',
-      subtitle: 'Experience Africa\'s legendary wildlife.',
-      description: 'Experience the crown jewel of Namibian wildlife at Etosha National Park on this immersive three-day safari. Home to lions, elephants, rhinos, giraffes, zebras, and over 300 bird species, Etosha offers world-class game viewing around its iconic white salt pan. Enjoy sunrise and sunset game drives, comfortable lodge accommodation, and expert guidance through one of Africa\'s greatest national parks.',
-      highlights: ['Multiple expert-led game drives', 'Big Five wildlife viewing opportunities', 'Sunrise and sunset safari experiences', 'Comfortable lodge accommodation', 'Etosha Pan panoramic viewpoints', 'Waterhole viewing at night'],
-      includes: ['Return transport from Walvis Bay/Windhoek', 'Professional safari guide', '2 nights lodge accommodation', 'All meals during the tour', 'Park entrance and conservation fees', 'Game drive vehicle', 'Bottled water and refreshments']
+      subtitle: 'All-inclusive safari at Namibia\'s premier wildlife destination.',
+      description: 'Experience Namibia\'s premier wildlife destination on this all-inclusive Etosha safari. Discover breathtaking landscapes, spectacular sunsets, and incredible wildlife sightings while enjoying comfortable accommodation, delicious meals, and expertly guided game drives. A perfect safari escape for nature lovers and adventure seekers.',
+      highlights: ['Multiple expert-led game drives', 'Big Five wildlife viewing opportunities', 'Sunrise and sunset safari experiences', 'Comfortable lodge accommodation', 'Visit famous waterholes', 'All meals included'],
+      includes: ['Return transport', 'Accommodation (2 nights)', 'Breakfast, lunch & dinner', 'Bottled water', 'Park entrance fees', 'Guided game drives', 'Professional driver/guide']
     }
   };
 
@@ -324,6 +335,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (transferFields) transferFields.style.display = '';
         if (calendarGroup) calendarGroup.style.display = 'none';
         if (guestCountGroup) guestCountGroup.style.display = 'none';
+      } else if (type === 'airticket') {
+        if (transferFields) transferFields.style.display = 'none';
+        if (calendarGroup) calendarGroup.style.display = '';
+        if (guestCountGroup) guestCountGroup.style.display = '';
       } else {
         if (transferFields) transferFields.style.display = 'none';
         if (calendarGroup) calendarGroup.style.display = '';
@@ -334,12 +349,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateSpecificServices(type, select, preselect) {
       const options = {
         'tour': [
-          { value: 'pkg1', text: 'Coast Explorer - Full Day (NAD 1,450/person)' },
-          { value: 'pkg2', text: 'Ocean Fun Cruise - Half Day (NAD 1,650/person)' },
-          { value: 'pkg3', text: 'Segen Desert Flames Experience - Full Day (NAD 2,250/person)' },
-          { value: 'pkg4', text: 'Segen Township Rhythm Tour - Half Day (NAD 950/person)' },
-          { value: 'pkg5', text: 'Wild Namibia - 2 Days (NAD 3,950/person)' },
-          { value: 'pkg6', text: 'Segen Etosha Wildlife Escape - 3 Days (NAD 7,500/person)' }
+          { value: 'pkg1', text: 'Spitzkoppe & Welwitschia Adventure - Full Day (from N$ 1,850/person)' },
+          { value: 'pkg2', text: 'Ocean Fun Cruise - Half Day (from N$ 1,650/person)' },
+          { value: 'pkg3', text: 'Sandwich Harbour Adventure - Full Day (from N$ 2,800/person)' },
+          { value: 'pkg4', text: 'Swakopmund / Walvis Bay Township Tour - Half Day (from N$ 950/person)' },
+          { value: 'pkg5', text: 'Damaraland Explorer - 3 Days (from N$ 5,150/person)' },
+          { value: 'pkg6', text: 'Etosha Wildlife Explorer - 3 Days (from N$ 8,500/person)' }
         ],
         'transfer': [
           { value: 'airport', text: 'Airport Transfer' },
@@ -354,6 +369,12 @@ document.addEventListener('DOMContentLoaded', () => {
           { value: '4x4', text: '4x4 Off-Road Vehicle' },
           { value: 'luxury', text: 'Luxury Vehicle' },
           { value: 'minibus', text: 'Minibus / Van' }
+        ],
+        'airticket': [
+          { value: 'domestic', text: 'Domestic Flight (within Namibia)' },
+          { value: 'regional', text: 'Regional Flight (Southern Africa)' },
+          { value: 'international', text: 'International Flight' },
+          { value: 'multi-city', text: 'Multi-City / Round Trip' }
         ]
       };
 
@@ -549,25 +570,10 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.addEventListener('click', (e) => {
         e.preventDefault();
 
-        // Determine payment method
-        const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
-        const isPaypal = paymentMethod && paymentMethod.value === 'paypal';
-
-        // Hide form, show success
         document.querySelector('.booking-steps').style.display = 'none';
         document.querySelector('.booking-form__body').style.display = 'none';
 
-        // Update success message based on payment method
         if (bookingSuccess) {
-          const successTitle = bookingSuccess.querySelector('h2');
-          const successDesc = bookingSuccess.querySelector('p');
-          if (isPaypal) {
-            if (successTitle) successTitle.textContent = 'Booking Submitted!';
-            if (successDesc) successDesc.textContent = 'Thank you for choosing SEGEN Tours. You will be redirected to PayPal to complete your payment. We\'ll confirm your reservation via email within 24 hours.';
-          } else {
-            if (successTitle) successTitle.textContent = 'Enquiry Submitted!';
-            if (successDesc) successDesc.textContent = 'Thank you for your interest in SEGEN Tours. We\'ve received your enquiry and our team will get back to you via email within 24 hours with availability and payment details.';
-          }
           bookingSuccess.classList.add('active');
         }
 

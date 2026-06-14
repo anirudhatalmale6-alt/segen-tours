@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Now | SEGEN Tours Transfers & Car Rentals</title>
-  <meta name="description" content="Book your Namibian tour, transfer, or car rental with SEGEN Tours. Easy online booking for Walvis Bay tours, airport transfers, and vehicle rentals.">
+  <title>Request a Quote | SEGEN Tours Transfers & Car Rentals</title>
+  <meta name="description" content="Request a quote for Namibian tours, transfers, car rentals, or air ticketing with SEGEN Tours. Easy online quote request for Walvis Bay tours, airport transfers, and vehicle rentals.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Book Now | SEGEN Tours Transfers & Car Rentals">
@@ -71,8 +71,8 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
           <span>Booking</span>
         </div>
-        <h1 class="page-header__title">Book Your Experience</h1>
-        <p class="page-header__subtitle">A few simple steps to your next unforgettable Namibian adventure.</p>
+        <h1 class="page-header__title">Request a Quote</h1>
+        <p class="page-header__subtitle">Tell us what you need and we'll send you a personalised quote.</p>
       </div>
     </section>
 
@@ -129,6 +129,13 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>
                   </div>
                   <div class="service-type-card__title">Car Rental</div>
+                </div>
+
+                <div class="service-type-card" data-type="airticket">
+                  <div class="service-type-card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+                  </div>
+                  <div class="service-type-card__title">Air Ticketing</div>
                 </div>
               </div>
 
@@ -272,8 +279,8 @@
 
             <!-- Step 4: Review -->
             <div class="form-step" data-step="4">
-              <h3 class="form-step__title">Review Your Booking</h3>
-              <p class="form-step__subtitle">Please confirm your details before submitting.</p>
+              <h3 class="form-step__title">Review Your Quote Request</h3>
+              <p class="form-step__subtitle">Please confirm your details. We'll send you a personalised quote with payment options (PayPal or EFT).</p>
 
               <div class="review-section">
                 <h4>Service Details</h4>
@@ -286,7 +293,7 @@
                   <span id="reviewService"></span>
                 </div>
                 <div class="review-row" id="reviewDateRow">
-                  <span>Date</span>
+                  <span>Preferred Date</span>
                   <span id="reviewDate"></span>
                 </div>
                 <div class="review-row" id="reviewGuestsRow">
@@ -327,30 +334,28 @@
                 </div>
               </div>
 
-              <div class="payment-section">
-                <h4>Payment Method</h4>
-                <div class="payment-options">
-                  <label class="payment-option">
-                    <input type="radio" name="paymentMethod" value="paypal" checked>
-                    <div class="payment-option__card">
-                      <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#003087" d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106z"/><path fill="#0070E0" d="M18.171 7.394c-.982 5.04-4.347 7.667-8.647 7.667h-2.19c-.523 0-.967.382-1.049.9L4.756 24h3.403c.457 0 .846-.334.917-.785l.038-.2.726-4.604.047-.254a.924.924 0 0 1 .917-.786h.577c3.74 0 6.669-1.52 7.524-5.912.357-1.834.172-3.366-.774-4.443a3.727 3.727 0 0 0-1.01-.822z"/></svg>
-                      <span>PayPal</span>
-                    </div>
-                  </label>
-                  <label class="payment-option">
-                    <input type="radio" name="paymentMethod" value="inquiry">
-                    <div class="payment-option__card">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                      <span>Enquiry Only</span>
-                    </div>
-                  </label>
+              <div class="review-section" style="background: #f0f4f8; border-radius: 8px; padding: 20px; margin-top: 16px;">
+                <h4 style="margin-bottom: 8px;">How It Works</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: var(--text-light);">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="background: var(--burnt-orange); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0;">1</span>
+                    Submit your quote request
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="background: var(--burnt-orange); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0;">2</span>
+                    We'll email you a personalised quote within 24 hours
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="background: var(--burnt-orange); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0;">3</span>
+                    Pay your invoice via PayPal or EFT (bank transfer)
+                  </div>
                 </div>
               </div>
 
               <div class="form-actions">
                 <button class="btn--back" data-prev>Back</button>
                 <button class="btn btn--gold btn--large" id="submitBooking">
-                  Confirm Booking
+                  Submit Quote Request
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;margin-left:6px;"><polyline points="20 6 9 17 4 12"/></svg>
                 </button>
               </div>
@@ -362,8 +367,8 @@
             <div class="booking-success__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <h2>Booking Submitted!</h2>
-            <p>Thank you for choosing SEGEN Tours. We've received your booking request and will confirm your reservation via email within 24 hours.</p>
+            <h2>Quote Request Submitted!</h2>
+            <p>Thank you for choosing SEGEN Tours. We've received your quote request and will send you a personalised quote via email within 24 hours. Once approved, you can pay your invoice via PayPal or EFT (bank transfer).</p>
             <p style="margin-top: 16px; color: var(--text-light); font-size: 0.9rem;">For urgent inquiries, call us at <a href="tel:+264817424200" style="color: var(--burnt-orange); font-weight: 600;">+264 81 742 4200</a></p>
             <a href="index.html" class="btn btn--primary" style="margin-top: 32px;">Return Home</a>
           </div>
